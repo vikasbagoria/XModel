@@ -52,7 +52,7 @@ function App() {
 
     // Phone number validation
     if (!/^\d{10}$/.test(phone)) {
-      alert('Invalid phone number. Please enter a 10-digit phone number.');
+      alert('Invalid phone number');
       return;
     }
 
@@ -60,7 +60,7 @@ function App() {
     const selectedDate = new Date(dob);
     const today = new Date();
     if (selectedDate > today) {
-      alert('Invalid date of birth. Please enter a valid past date.');
+      alert('Invalid date of birth');
       return;
     }
 
