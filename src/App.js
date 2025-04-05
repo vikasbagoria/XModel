@@ -52,7 +52,7 @@ function App() {
 
     // Phone number validation
     if (!/^\d{10}$/.test(phone)) {
-      alert('Invalid phone number');
+      alert("Invalid phone number");
       return;
     }
 
@@ -86,6 +86,8 @@ function App() {
   }, [showModal]);
 
   return (
+    <>
+    <div id = "root"></div>
     <div className="modal">
       <button onClick={() => setShowModal(true)}>Open Form</button>
 
@@ -143,6 +145,7 @@ function App() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
