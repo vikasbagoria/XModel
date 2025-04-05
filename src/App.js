@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-
+import './App.css';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
