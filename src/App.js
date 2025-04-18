@@ -119,7 +119,7 @@ function App() {
             <label htmlFor="phone">Phone Number:</label>
             <input
               id="phone"
-              type="tel"
+              type="number"
               value={formData.phone}
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
