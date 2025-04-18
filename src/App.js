@@ -51,7 +51,7 @@ function App() {
     }
 
     // Phone number validation
-    if (!/^\d{10}$/.test(phone)) {
+    if (formData.phone.length != 10) {
       alert("Invalid phone number");
       return;
     }
