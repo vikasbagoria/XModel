@@ -23,40 +23,18 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-console.log(formData)
     const { username, email, phone, dob } = formData;
 
-    // Empty field validation
-    // if (!username) {
-    //   alert('Please fill out the Username field.');
-    //   return;
-    // }
-    // if (!email) {
-    //   alert('Please fill out the Email field.');
-    //   return;
-    // }
-    // if (!phone) {
-    //   alert('Please fill out the Phone Number field.');
-    //   return;
-    // }
-    // if (!dob) {
-    //   alert('Please fill out the Date of Birth field.');
-    //   return;
-    // }
-
-    // Email validation
     if (!email.includes('@')) {
       alert('Invalid email. Please check your email address.');
       return;
     }
 
-    // Phone number validation
     if (formData.phone.length != 10) {
       alert("Invalid phone number");
       return;
     }
 
-    // DOB validation (must not be a future date)
     const selectedDate = new Date(dob);
     const today = new Date();
     if (selectedDate > today) {
@@ -64,7 +42,6 @@ console.log(formData)
       return;
     }
 
-    // All valid
     setShowModal(false);
     resetForm();
   };
@@ -88,10 +65,11 @@ console.log(formData)
   return (
     <>
     <div id = "root"></div>
-    <div className="modal">
+    
       <button onClick={() => setShowModal(true)}>Open Form</button>
 
       {showModal && (
+        <div className="modal">
         <div className="modal-content" ref={modalRef}>
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>
@@ -143,8 +121,9 @@ console.log(formData)
             </button>
           </form>
         </div>
+        </div>
       )}
-    </div>
+    
     </>
   );
 }
