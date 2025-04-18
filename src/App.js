@@ -27,10 +27,10 @@ console.log(formData)
     const { username, email, phone, dob } = formData;
 
     // Empty field validation
-    if (!username) {
-      alert('Please fill out the Username field.');
-      return;
-    }
+    // if (!username) {
+    //   alert('Please fill out the Username field.');
+    //   return;
+    // }
     if (!email) {
       alert('Please fill out the Email field.');
       return;
