@@ -31,18 +31,18 @@ console.log(formData)
     //   alert('Please fill out the Username field.');
     //   return;
     // }
-    if (!email) {
-      alert('Please fill out the Email field.');
-      return;
-    }
-    if (!phone) {
-      alert('Please fill out the Phone Number field.');
-      return;
-    }
-    if (!dob) {
-      alert('Please fill out the Date of Birth field.');
-      return;
-    }
+    // if (!email) {
+    //   alert('Please fill out the Email field.');
+    //   return;
+    // }
+    // if (!phone) {
+    //   alert('Please fill out the Phone Number field.');
+    //   return;
+    // }
+    // if (!dob) {
+    //   alert('Please fill out the Date of Birth field.');
+    //   return;
+    // }
 
     // Email validation
     if (!email.includes('@')) {
