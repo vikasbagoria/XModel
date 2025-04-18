@@ -54,13 +54,22 @@ function App() {
   };
 
   useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!modalRef.current?.contains(e.target)) {
+        setShowModal(false);
+        resetForm();
+      }
+    };
+  
     if (showModal) {
-      document.addEventListener('mousedown', handleOutsideClick);
+      document.addEventListener('click', handleClickOutside);
     }
+  
     return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [showModal]);
+  
 
   return (
     <>
