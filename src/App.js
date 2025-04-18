@@ -23,7 +23,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+console.log(formData)
     const { username, email, phone, dob } = formData;
 
     // Empty field validation
@@ -119,7 +119,7 @@ function App() {
             <label htmlFor="phone">Phone Number:</label>
             <input
               id="phone"
-              type="number"
+              type="text"
               value={formData.phone}
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
